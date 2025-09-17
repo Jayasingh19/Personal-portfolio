@@ -7,6 +7,7 @@
   <title>Jaya Singh | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 
+
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
@@ -44,7 +45,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <img src="jaya.jpg" class="profile-photo">
+      <img src="images/jaya.jpg" class="profile-photo">
       <h1>Hi, I'm <span>Jaya Singh</span></h1>
       <p class="hero-subtext">Front-End Developer</p>
       <a href="#contact" class="btn">Let's Connect</a>
@@ -71,13 +72,36 @@
     <div class="container">
       <h2>Skills</h2>
       <div class="skill-grid">
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">Bootstrap</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Basic Python</div>
-        <div class="skill-card">SQL</div>
-        <div class="skill-card">MS Excel</div>
+         <div class="skill-card">
+        <i class="fab fa-html5 fa-3x" style="color:#E44D26;"></i>
+        <p>HTML</p>
+      </div>
+        <div class="skill-card">
+        <i class="fab fa-css3-alt fa-3x" style="color:#264DE4;"></i>
+        <p>CSS</p>
+      </div>
+       <div class="skill-card">
+        <i class="fab fa-js-square fa-3x" style="color: yellow;"></i>
+        <p>JavaScript</p>
+      </div>
+          <div class="skill-card">
+        <i class="fab fa-bootstrap fa-3x" style="color:#563d7c;"></i>
+        <p>Bootstrap</p>
+      </div>
+        <div class="skill-card">
+        <i class="fab fa-python fa-3x" style="color:#306998;"></i>
+        <p> Python</p>
+      </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-database fa-3x" style="color: blue;"></i>
+         <p>SQL</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-file-excel fa-3x" style="color: darkgreen;"></i>
+        <p>MS Excel</p>
+      </div>
+        
+        
 
       </div>
     </div>
@@ -148,25 +172,48 @@
   </footer>
 
 <!-- ========================================================================================================= -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-links'); // the <ul>
+const navItems = document.querySelectorAll(".nav-links a"); // all <a> links
 
+// Hamburger toggle
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  menuToggle.classList.toggle('active'); // optional animation
+});
 
-<!-- JAVASCRIPT -->
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-
-
-  // Close menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Close menu on link click (mobile)
+navItems.forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
   });
 });
+
+// Navigation highlight on scroll
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+
 
 </script>
 

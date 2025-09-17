@@ -17,7 +17,7 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 20px 0;
+  padding: 40px 0;
   
 }
 
@@ -74,6 +74,14 @@ header {
   width: 100%;
 }
 
+.nav-links a.active {
+  color: #4CAF50;
+  font-weight: bold;
+  border-bottom: 2px solid #4CAF50;
+}
+
+
+
 
 /* 🔹 Mobile Styles */
 .menu-toggle {
@@ -83,6 +91,11 @@ header {
   margin-left: auto;
   /* push hamburger to right */
 }
+.menu-toggle.active {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
 
 @media (max-width: 768px) {
   .nav-links {
@@ -216,9 +229,6 @@ header {
 }
 
 
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -313,6 +323,18 @@ section h2::after {
 
 .skill-card:hover::before {
   transform: scaleX(1);
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Image icons */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 /* ==================================================== */
