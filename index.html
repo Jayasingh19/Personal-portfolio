@@ -86,26 +86,41 @@
 <!-- ========================================================================================== -->
 
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p> Built this website using HTML, and CSS .This website is a showcase of my skills .</p>
-        </div>
-        <div class="project-card">
-          <h3>Responsive Landing Page</h3>
-          <p>A landing page design built with HTML, CSS and Bootstrap.</p>
-        </div>
-        <div class="project-card">
-          <h3>Amazon Clone</h3>
-          <p> I built this project using HTML, CSS, and Basic of JavaScript</p>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="amazon.png" alt="Amazon Clone">
+        <h3>Amazon Clone</h3>
+        <p>A responsive e-commerce website built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+          <a href="https://github.com/jayasingh19/Amazon-clone" target="_blank" class="btn">GitHub</a>
+          <a href="https://jayasingh19.github.io/Amazon-clone/" target="_blank" class="btn">Live Demo</a>
         </div>
       </div>
-    </div>
-  </section>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="portfolio.png" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio showcasing skills, projects, and contact details.</p>
+        <div class="project-links">
+          <a href="https://github.com/jayasingh19/Personal-portfolio" target="_blank" class="btn">GitHub</a>
+          <a href="https://jayasingh19.github.io/Personal-portfolio/" target="_blank" class="btn">Live Demo</a>
+        </div>
+      </div>
+
+</section>
+
+
+
+
 
 <!-- ============================================================================================== -->
 
@@ -148,6 +163,18 @@
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+
+
+
+  // Close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+
+
 </script>
 
 <!-- ========================================================================================================= -->
