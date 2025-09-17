@@ -13,23 +13,33 @@
 
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <div class="container nav-container">
 
-      <h1 class="logo">Jaya Singh</h1>
+<!-- Header / Navigation -->
+<header>
+  <div class="container nav-container">
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <h1 class="logo">Jaya Singh</h1>
+
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Icon  -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
     </div>
-  </header>
+
+  </div>
+
+</header>
+<!-- ======================================================================= -->
+
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -41,6 +51,9 @@
     </div>
   </section>
 
+<!-- ===================================================================================== -->
+
+
   <!-- About Section -->
   <section id="about">
     <div class="container">
@@ -49,6 +62,9 @@
         enjoy creating clean responsive websites.</p>
     </div>
   </section>
+
+<!-- ============================================================================================ -->
+
 
   <!-- Skills Section -->
   <section id="skills">
@@ -66,6 +82,9 @@
       </div>
     </div>
   </section>
+
+<!-- ========================================================================================== -->
+
 
   <!-- Projects Section -->
   <section id="projects">
@@ -88,6 +107,9 @@
     </div>
   </section>
 
+<!-- ============================================================================================== -->
+
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
@@ -107,11 +129,29 @@
     </div> 
   </section>
 
+<!-- =================================================================================================== -->
+
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Jaya Singh | All rights reserved.</p>
-
   </footer>
+
+<!-- ========================================================================================================= -->
+
+
+<!-- JAVASCRIPT -->
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+<!-- ========================================================================================================= -->
+
 
 </body>
 
