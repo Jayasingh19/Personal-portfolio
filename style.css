@@ -296,7 +296,7 @@ section h2::after {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+   margin-top: 30px; 
 }
 
 .skill-card {
